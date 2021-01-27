@@ -1,0 +1,109 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:2a06b9bc-3711-457a-8b1e-4d8a461774b6 -->
+<metadata name="orders_history" path="/shared/Demo/Orders-Oracle/ORDERS/orders_history" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="OrdID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CustID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ProdID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="OrderDate" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(26)" subType="DATASOURCE_TYPE" type="STRING" maxLength="26"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="RequiredDate" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(26)" subType="DATASOURCE_TYPE" type="STRING" maxLength="26"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShippedDate" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(26)" subType="DATASOURCE_TYPE" type="STRING" maxLength="26"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipVia" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Freight" nullable="true">
+      <datatype name="NUMBER" extendedName="NUMBER(8,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="8" maxFractionalDigits="2"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipName" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipAddress" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(60)" subType="DATASOURCE_TYPE" type="STRING" maxLength="60"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipCity" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(15)" subType="DATASOURCE_TYPE" type="STRING" maxLength="15"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipRegion" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(15)" subType="DATASOURCE_TYPE" type="STRING" maxLength="15"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipPostalCode" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(10)" subType="DATASOURCE_TYPE" type="STRING" maxLength="10"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipCountry" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(15)" subType="DATASOURCE_TYPE" type="STRING" maxLength="15"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="ORDERS_H_ID_IDX" type="OTHER" unique="false">
+      <indexColumn name="OrdID" sortOrder="ASCENDING"/>
+      <attribute name="indexSchema" type="STRING">ORDERS</attribute>
+    </index>
+    <index name="ORDERS_H_ODATE_IDX" type="OTHER" unique="false">
+      <indexColumn name="OrderDate" sortOrder="ASCENDING"/>
+      <attribute name="indexSchema" type="STRING">ORDERS</attribute>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="i:0:indexSchema" type="STRING">ORDERS</attribute>
+  <attribute name="i:1:indexSchema" type="STRING">ORDERS</attribute>
+</metadata>

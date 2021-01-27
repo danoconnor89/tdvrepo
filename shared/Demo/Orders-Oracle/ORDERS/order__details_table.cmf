@@ -1,0 +1,58 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:2a06b9bc-3711-457a-8b1e-4d8a461774b6 -->
+<metadata name="order_details" path="/shared/Demo/Orders-Oracle/ORDERS/order_details" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="OrdID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ProductID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="UnitPrice" nullable="true">
+      <datatype name="NUMBER" extendedName="NUMBER(19,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Quantity" nullable="true">
+      <datatype name="SMALLINT" extendedName="NUMBER(4,0)" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-9999" maxValue="9999"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Discount" nullable="true">
+      <datatype name="NUMBER" extendedName="NUMBER(8,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="8" maxFractionalDigits="2"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="ORDERDETAILS_ID_IDX" type="OTHER" unique="false">
+      <indexColumn name="OrdID" sortOrder="ASCENDING"/>
+      <attribute name="indexSchema" type="STRING">ORDERS</attribute>
+    </index>
+    <index name="ORDERDETAILS_QTY_IDX" type="OTHER" unique="false">
+      <indexColumn name="Quantity" sortOrder="ASCENDING"/>
+      <attribute name="indexSchema" type="STRING">ORDERS</attribute>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="i:0:indexSchema" type="STRING">ORDERS</attribute>
+  <attribute name="i:1:indexSchema" type="STRING">ORDERS</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1518982470732</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+</metadata>

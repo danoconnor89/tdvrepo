@@ -1,0 +1,76 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:2a06b9bc-3711-457a-8b1e-4d8a461774b6 -->
+<metadata name="Customers-SQLSrv" path="/shared/Demo/Customers-SQLSrv" type="DATA_SOURCE" subtype="RELATIONAL" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/Demo/Customers-SQLSrv/customers/dbo/cache_status" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="257"></datatype>
+  </dependency>
+  <dependency target="/shared/Demo/Customers-SQLSrv/customers/dbo/cache_tracking" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="257"></datatype>
+  </dependency>
+  <attribute name="LowerBoundForDataShip" type="LONG">50000</attribute>
+  <attribute name="OAuthConfig" type="NULL"/>
+  <attribute name="UpperBoundForDataShip" type="LONG">5000000</attribute>
+  <attribute name="allDatabases" type="BOOLEAN">false</attribute>
+  <attribute name="authentication" type="STRING">BASIC</attribute>
+  <attribute name="cacheStatusAndTrackingDS" type="STRING"/>
+  <attribute name="cacheStatusTable" type="STRING">/shared/Demo/Customers-SQLSrv/customers/dbo/cache_status</attribute>
+  <attribute name="cacheTrackingTable" type="STRING">/shared/Demo/Customers-SQLSrv/customers/dbo/cache_tracking</attribute>
+  <attribute name="collationSensitive" type="BOOLEAN">false</attribute>
+  <attribute name="commitOnFetchDone" type="BOOLEAN">false</attribute>
+  <attribute name="concurrentRequestLimit" type="INTEGER">0</attribute>
+  <attribute name="connCheckOutProcedure" type="STRING"/>
+  <attribute name="connPoolMaxSize" type="INTEGER">100</attribute>
+  <attribute name="connPoolMinSize" type="INTEGER">0</attribute>
+  <attribute name="connPoolTimeout" type="INTEGER">30</attribute>
+  <attribute name="connProperties" type="MAP"></attribute>
+  <attribute name="connStaleTimeout" type="INTEGER">60</attribute>
+  <attribute name="connValidateQuery" type="STRING"/>
+  <attribute name="connectorName" type="STRING"/>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="dataShipTempTablePrefix" type="STRING">T</attribute>
+  <attribute name="destinationSchema" type="STRING"/>
+  <attribute name="driverName" type="STRING">Microsoft SQL Server 2008</attribute>
+  <attribute name="execTimeout" type="INTEGER">0</attribute>
+  <attribute name="healthmonitortable" type="STRING">cis_hm_table</attribute>
+  <attribute name="isPassThrough" type="STRING">Disabled</attribute>
+  <attribute name="keytabFile" type="STRING"/>
+  <attribute name="lastModifiedDate" type="LONG">1570551232785</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="login" type="STRING">customers</attribute>
+  <attribute name="maxNumberForOrSyntax" type="INTEGER">2147483647</attribute>
+  <attribute name="maxSourceSideCardinalityForSJ" type="STRING"/>
+  <attribute name="maximumContainerDepth" type="INTEGER">2</attribute>
+  <attribute name="minTargetToSourceRatioForSJ" type="STRING"/>
+  <attribute name="name" type="STRING">Customers-SQLSrv</attribute>
+  <attribute name="nativeDataLoadingEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="noReturnParam" type="BOOLEAN">false</attribute>
+  <attribute name="password" type="PASSWORD_STRING">ENC(Z3DqX7A9sLnLm3m+X1cBGA==$dW1H8yH4iTCVE0YV4YsCaQ==)</attribute>
+  <attribute name="persistPassword" type="BOOLEAN">true</attribute>
+  <attribute name="selectMode" type="STRING">Direct</attribute>
+  <attribute name="selectionState" type="INTEGER">1</attribute>
+  <attribute name="spn" type="STRING"/>
+  <attribute name="sqlserverEnableBcp" type="BOOLEAN">false</attribute>
+  <attribute name="statsConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="statsNumThreads" type="INTEGER">1</attribute>
+  <attribute name="statsTableDefault" type="STRING">ALL</attribute>
+  <attribute name="statsUseEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="supportsDataship" type="BOOLEAN">false</attribute>
+  <attribute name="supportsDatashipAsTarget" type="BOOLEAN">false</attribute>
+  <attribute name="supportsStarSchema" type="BOOLEAN">false</attribute>
+  <attribute name="topicName" type="STRING"/>
+  <attribute name="txnIsolationLevel" type="STRING">Read Committed</attribute>
+  <attribute name="type" type="STRING">SqlServer</attribute>
+  <attribute name="url" type="STRING">jdbc:sqlserver://localhost:1433;databaseName=customers;selectMethod=direct</attribute>
+  <attribute name="urlDatabaseName" type="STRING">customers</attribute>
+  <attribute name="urlIP" type="STRING">localhost</attribute>
+  <attribute name="urlPatternStr" type="STRING">jdbc:sqlserver://&lt;HOST&gt;:&lt;PORT&gt;;databaseName=&lt;DATABASE_NAME&gt;;selectMethod=&lt;SELECT_MODE&gt;</attribute>
+  <attribute name="urlPort" type="INTEGER">1433</attribute>
+  <attribute name="useQuotesForTableIdentifierInBCP" type="BOOLEAN">false</attribute>
+  <attribute name="useTrustedConnectionWithBCP" type="BOOLEAN">false</attribute>
+</metadata>

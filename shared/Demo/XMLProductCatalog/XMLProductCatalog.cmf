@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:2a06b9bc-3711-457a-8b1e-4d8a461774b6 -->
+<metadata name="XMLProductCatalog" path="/shared/Demo/XMLProductCatalog" type="DATA_SOURCE" subtype="XML_FILE" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="OAuthConfig" type="NULL"/>
+  <attribute name="autoAddChildren" type="BOOLEAN">false</attribute>
+  <attribute name="cacheStatusAndTrackingDS" type="STRING"/>
+  <attribute name="charset" type="STRING">&lt;auto detect&gt;</attribute>
+  <attribute name="creationDate" type="LONG">1377714993385</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="driverName" type="STRING">File-XML</attribute>
+  <attribute name="filters" type="STRING">*.xml</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1519589817423</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="local" type="BOOLEAN">true</attribute>
+  <attribute name="name" type="STRING">XMLProductCatalog</attribute>
+  <attribute name="noNamespaceSchemaLocation" type="STRING"/>
+  <attribute name="root" type="STRING">C:\Program Files\TIBCO\TDV Server 7.0\docs\examples</attribute>
+  <attribute name="schemaLocation" type="STRING"/>
+  <attribute name="type" type="STRING">XmlFile</attribute>
+</metadata>
