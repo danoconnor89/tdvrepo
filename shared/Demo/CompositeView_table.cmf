@@ -1,5 +1,5 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<!-- salt:7d85377b-b2c4-43ea-b380-d065a120454e -->
+<!-- salt:f07af13f-e9eb-4996-944f-bf19cdaeb098 -->
 <metadata name="CompositeView" path="/shared/Demo/CompositeView" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="NONE">
   <columns>
     <column name="OrderID" nullable="true">
