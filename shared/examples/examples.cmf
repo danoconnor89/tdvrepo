@@ -1,0 +1,14 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:8c637809-3268-4afd-92ae-44fc3ec3b857 -->
+<metadata name="examples" path="/shared/examples" type="CONTAINER" subtype="FOLDER" changeToken="0">
+  <annotation><![CDATA[This folder contains pre-created resources.]]></annotation>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="lastModifiedDate" type="LONG">1401221465456</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+</metadata>

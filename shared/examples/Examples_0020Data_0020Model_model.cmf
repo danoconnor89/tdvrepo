@@ -1,0 +1,690 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:8c637809-3268-4afd-92ae-44fc3ec3b857 -->
+<metadata name="Examples Data Model" path="/shared/examples/Examples Data Model" type="MODEL" subtype="NONE" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/ASAssets/Utilities/examples/repository/target/PRODUCT_VIEW2" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="productid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="productname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="productdescription">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="categoryid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="serialnumber">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="unitprice">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="reorderlevel">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="leadtime">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/CompositeView" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="OrderID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ProductID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Discount">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="OrderDate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CompanyName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CustomerContactFirstName">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CustomerContactLastName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CustomerContactPhone">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="ProductName">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="TransactionID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="SupplierName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="SupplierContactName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="SupplierPhoneNumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DateRequired">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DatePromised">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ShipDate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SupplierID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ViewOrder" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="OrderID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ProductID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Discount">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="OrderDate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CompanyName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CustomerContactFirstName">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CustomerContactLastName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CustomerContactPhone">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ViewSales" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="ProductID">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="0"/>
+      </element>
+      <element name="ProductName">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="CategoryID">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="0"/>
+      </element>
+      <element name="CategoryName">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="ProductDescription">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="SerialNumber">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="ReorderLevel">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="0"/>
+      </element>
+      <element name="LeadTime">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="UnitPrice">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="Status">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Discount">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ViewSupplier" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="ProductID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="TransactionID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OrderDate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DateRequired">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DatePromised">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ShipDate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SupplierID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="SupplierName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="SupplierContactName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="SupplierPhoneNumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="257"></datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory/tutorial/categories" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="categoryid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="categoryname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory/tutorial/employees" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="employeeid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="firstname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="lastname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="title">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="extension">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="workphone">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory/tutorial/inventorytransactions" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="transactionid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="transactiondate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="productid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="purchaseorderid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="transactiondescription">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="unitprice">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="0"/>
+      </element>
+      <element name="unitsordered">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="unitsreceived">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="unitssold">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="unitsshrinkage">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory/tutorial/products" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="productid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="productname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="productdescription">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="categoryid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="serialnumber">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="unitprice">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="reorderlevel">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="leadtime">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory/tutorial/purchaseorders" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="purchaseorderid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ponumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="purchaseorderdescription">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="supplierid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="employeeid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="daterequired">
+        <datatype type="DATE"/>
+      </element>
+      <element name="datepromised">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shipdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shippingmethodid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="freightcharge">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_inventory/tutorial/suppliers" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="supplierid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="suppliername">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="contactname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="contacttitle">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="address">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="city">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="postalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="stateorprovince">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="countryregion">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="phonenumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="faxnumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="257"></datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/cache_status" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="clusterid">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="serverid" nullable="false">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+      <element name="resourceid" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="parameters">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="status" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="starttime" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="finishtime">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="cleartime">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="bytes">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="message">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="bucket">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="incrementalstatus">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="incrementalmaintenancelevel">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/cache_tracking" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="clusterid">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="serverid" nullable="false">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+      <element name="resourceid" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="catalog">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="schema">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="table" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="createtime">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/customers" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="customerid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="companyname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="contactfirstname">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="contactlastname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="billingaddress">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="city">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="stateorprovince">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="postalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="countryregion">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="contacttitle">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="phonenumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="faxnumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/employees" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="employeeid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="firstname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="lastname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="title">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="extension">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="workphone">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/orderdetails" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="orderdetailid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="productid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="quantity">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="unitprice">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="status">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="discount">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/orders" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="orderid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="customerid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="employeeid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="purchaseordernumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipaddress">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="shipcity">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipstateorprovince">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shippostalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="shipcountry">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipphonenumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shippingmethodid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="freightcharge">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/orders_cache" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="customerid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="employeeid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="purchaseordernumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipaddress">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="shipcity">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipstateorprovince">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shippostalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="shipcountry">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipphonenumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shippingmethodid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="freightcharge">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/shippingmethods" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="shippingmethodid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="shippingmethod">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="creationDate" type="LONG">1409093041876</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="crossModelBlob" type="BYTE_ARRAY">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</attribute>
+  <attribute name="crossModelProperties" type="STRING_ARRAY">
+    <item>modeler.view.relationship.action.toggleNavigator</item>
+    <item>true</item>
+    <item>modeler.view.relationship.currentLayoutStyle</item>
+    <item>ORTHOGONAL</item>
+  </attribute>
+  <attribute name="descendentResourceRefs" type="SET">
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXQACHR1dG9yaWFsdAAJc3VwcGxpZXJzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAJZW1wbG95ZWVzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAPc2hpcHBpbmdtZXRob2RzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXQACHR1dG9yaWFsdAAVaW52ZW50b3J5dHJhbnNhY3Rpb25zeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAMb3JkZXJzX2NhY2hleA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAJY3VzdG9tZXJzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXQACHR1dG9yaWFsdAAJZW1wbG95ZWVzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXQACHR1dG9yaWFsdAAKY2F0ZWdvcmllc3g=</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAOY2FjaGVfdHJhY2tpbmd4</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAMY2FjaGVfc3RhdHVzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXQACHR1dG9yaWFsdAAOcHVyY2hhc2VvcmRlcnN4</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXQACHR1dG9yaWFsdAAIcHJvZHVjdHN4</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAMb3JkZXJkZXRhaWxzeA==</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAV3BAAAAAV0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3QACHR1dG9yaWFsdAAGb3JkZXJzeA==</item>
+  </attribute>
+  <attribute name="lastModifiedDate" type="LONG">1544708179727</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="memberResourceRefs" type="SET">
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAN3BAAAAAN0AAZzaGFyZWR0AAhleGFtcGxlc3QADFZpZXdTdXBwbGllcng=</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAN3BAAAAAN0AAZzaGFyZWR0AAhleGFtcGxlc3QACVZpZXdPcmRlcng=</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAN3BAAAAAN0AAZzaGFyZWR0AAhleGFtcGxlc3QACVZpZXdTYWxlc3g=</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAhzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAN3BAAAAAN0AAZzaGFyZWR0AAhleGFtcGxlc3QADGRzX2ludmVudG9yeXg=</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAN3BAAAAAN0AAZzaGFyZWR0AAhleGFtcGxlc3QADUNvbXBvc2l0ZVZpZXd4</item>
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAhzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAN3BAAAAAN0AAZzaGFyZWR0AAhleGFtcGxlc3QACWRzX29yZGVyc3g=</item>
+  </attribute>
+  <attribute name="modelBlob" type="BYTE_ARRAY">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</attribute>
+  <attribute name="modelProperties" type="STRING_ARRAY">
+    <item>modeler.view.relationship.action.hierarchicalLayout</item>
+    <item>false</item>
+    <item>modeler.view.relationship.action.showForeignKeyRelationships</item>
+    <item>true</item>
+    <item>modeler.view.relationship.action.showViewResources</item>
+    <item>true</item>
+    <item>modeler.view.relationship.action.toggleNavigator</item>
+    <item>true</item>
+    <item>modeler.view.relationship.currentLayoutStyle</item>
+    <item>ORTHOGONAL</item>
+  </attribute>
+  <attribute name="relatedResourceRefs" type="SET">
+    <item type="OBJECT">rO0ABXNyACpjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUGF0aFR5cGUAABnTDJQkyQIAAlMABHR5cGVMAARwYXRodAAoTGNvbS9jb21wb3NpdGVzdy9jb21tb24vcmVwb3NpdG9yeS9QYXRoO3hwAAJzcgAmY29tLmNvbXBvc2l0ZXN3LmNvbW1vbi5yZXBvc2l0b3J5LlBhdGhACAIJ5hQ4OAIAAloACGFic29sdXRlTAAFcGFydHN0ABBMamF2YS91dGlsL0xpc3Q7eHABc3IAE2phdmEudXRpbC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAd3BAAAAAd0AAZzaGFyZWR0AAhBU0Fzc2V0c3QACVV0aWxpdGllc3QACGV4YW1wbGVzdAAKcmVwb3NpdG9yeXQABnRhcmdldHQADVBST0RVQ1RfVklFVzJ4</item>
+  </attribute>
+  <attribute name="relationshipCriteria" type="OBJECT">rO0ABXNyADZjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuUmVsYXRpb25zaGlwQ3JpdGVyaWEAAAAV30W50QIAB0kACG1heENvdW50RAAIbWF4U2NvcmVEAAhtaW5TY29yZUkADHNjYW5JZEZpbHRlclsADWNhcmRpbmFsaXRpZXN0AAJbSVsACHN0YXR1c2VzcQB+AAFbAAV0eXBlc3EAfgABeHB/////f+////////8/6ZmZmZmZmv////91cgACW0lNumAmduqypQIAAHhwAAAABQAAAAQAAAADAAAAAgAAAAEAAAAAdXEAfgADAAAABAAAAAEAAAACAAAAAAAAAANw</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1409093041876</attribute>
+  <attribute name="tableModelProperties" type="STRING_ARRAY"></attribute>
+</metadata>

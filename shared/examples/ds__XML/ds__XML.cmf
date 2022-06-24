@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:8c637809-3268-4afd-92ae-44fc3ec3b857 -->
+<metadata name="ds_XML" path="/shared/examples/ds_XML" type="DATA_SOURCE" subtype="XML_FILE" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="OAuthConfig" type="NULL"/>
+  <attribute name="autoAddChildren" type="BOOLEAN">true</attribute>
+  <attribute name="cacheStatusAndTrackingDS" type="STRING"/>
+  <attribute name="charset" type="STRING">&lt;auto detect&gt;</attribute>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="driverName" type="STRING">File-XML</attribute>
+  <attribute name="filters" type="STRING"/>
+  <attribute name="isEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1616168183024</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="local" type="BOOLEAN">false</attribute>
+  <attribute name="name" type="STRING">ds_XML</attribute>
+  <attribute name="noNamespaceSchemaLocation" type="STRING"/>
+  <attribute name="reintrospection_recommended" type="BOOLEAN">true</attribute>
+  <attribute name="root" type="STRING"/>
+  <attribute name="schemaLocation" type="STRING"/>
+  <attribute name="selectionState" type="INTEGER">2</attribute>
+  <attribute name="type" type="STRING">XmlFile</attribute>
+  <attribute name="url" type="STRING">file:///C:/Program%20Files/TIBCO/TDV%20Server%208.4/docs/examples/productCatalog.xml</attribute>
+  <attribute name="userDeletedSet" type="SET"></attribute>
+</metadata>
